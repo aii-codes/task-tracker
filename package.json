@@ -4,7 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "lint": "npm run lint:client && npm run lint:server",
+    "lint:client": "cd client && npx eslint src",
+    "lint:server": "cd server && npx eslint src",
+    "lint:fix": "npm run lint:fix:client && npm run lint:fix:server",
+    "lint:fix:client": "cd client && npx eslint src --fix",
+    "lint:fix:server": "cd server && npx eslint src --fix"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +20,9 @@
     "express": "^5.1.0"
   },
   "devDependencies": {
+    "eslint": "^9.38.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
     "nodemon": "^3.1.10"
   }
 }

@@ -1,0 +1,29 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Lint All Files",
+      "type": "npm",
+      "script": "lint",
+      "problemMatcher": {
+        "owner": "eslint",
+        "source": "eslint",
+        "fileLocation": "absolute",
+        "pattern": {
+          "regexp": "^(.+?):(\\d+):(\\d+):\\s+(warning|error)\\s+(.+?)\\s+(.+)$",
+          "file": 1,
+          "line": 2,
+          "column": 3,
+          "severity": 4,
+          "message": 5,
+          "code": 6
+        }
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "focus": false
+      }
+    }
+  ]
+}
