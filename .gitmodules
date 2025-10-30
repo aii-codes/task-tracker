@@ -1,0 +1,6 @@
+[submodule "client"]
+	path = client
+	url = https://github.com/aii-codes/task-tracker-client.git
+[submodule "server"]
+	path = server
+	url = https://github.com/aii-codes/task-tracker-server.git
